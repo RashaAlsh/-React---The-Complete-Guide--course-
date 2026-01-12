@@ -1,6 +1,6 @@
 # React – The Complete Guide 2025
 Course projects and notes based on  
-**React – The Complete Guide (incl. Next.js, Redux)**
+**React – The Complete Guide (incl. Next.js, Redux)** on udemy
 
 ## 📚 Contents
 - JavaScript Refresher 
