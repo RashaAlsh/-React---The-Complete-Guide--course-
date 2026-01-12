@@ -11,7 +11,7 @@ Course projects and notes based on
 
 ## 🗂️ Structure
 - `/JavaScript Refresher `
-- `/React 
+- `/React`
 - `/nextjs`
 - `/TypeScript`
 - `/notes` – Personal notes & summaries
