@@ -10,9 +10,10 @@ Course projects and notes based on
 - TypeScript & React
 
 ## 🗂️ Structure
-- `/01-react-basics` – Core React concepts
-- `/redux` – Redux & RTK examples
-- `/nextjs` – Next.js projects
+- `/JavaScript Refresher `
+- `/React 
+- `/nextjs`
+- `/TypeScript`
 - `/notes` – Personal notes & summaries
 
 
