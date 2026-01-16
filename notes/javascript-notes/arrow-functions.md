@@ -1,57 +1,100 @@
 # Arrow Functions
 
-Shorter function syntax it was introduced in ES6 (ECMAScript 2015) and are especially common in modern JavaScript, React, and Node.js.
+Arrow functions are a **shorter way to write functions** in JavaScript.
+They were introduced in **ES6 (ECMAScript 2015)** and are especially common in **modern JavaScript**, **React**, and **Node.js**.
+
+---
 
 ## Syntax
 
-Traditional Function
+### Traditional Function
 
-```function sayHi() {
+```js
+function sayHi() {
   console.log('Hi');
 }
+```
 
-Arrow Function
+### Arrow Function
 
-```const sayHi = () => console.log('Hi');
+```js
+const sayHi = () => console.log('Hi');
+```
 
-## Rules & Shortcuts 
+---
 
-- If the function has no parameters, you must use empty parentheses
+## Rules & Shortcuts
 
-```const greet = () => console.log('Hello');
+### 1. No Parameters
 
-- If the function has exactly one parameter, parentheses are optional
+If the function has **no parameters**, you must use empty parentheses:
 
-```const greet = name => console.log(name);
+```js
+const greet = () => console.log('Hello');
+```
 
-If there are multiple parameters, parentheses are required.
+### 2. One Parameter
 
-```const add = (a, b) => a + b;
+If the function has **exactly one parameter**, parentheses are optional:
 
-If the function returns a single value
+```js
+const greet = name => console.log(name);
+```
 
-Remove curly braces { }
-Remove the return keyword
+### 3. Multiple Parameters
 
-```const multiply = (a, b) => a * b;
+If there are **multiple parameters**, parentheses are required:
 
-If your function has multiple statements, you must use braces and return.
+```js
+const add = (a, b) => a + b;
+```
 
-```const multiply = (a, b) => {
+### 4. Single Expression Return
+
+If the function **returns a single value**, you can:
+
+* Remove curly braces `{ }`
+* Remove the `return` keyword
+
+```js
+const multiply = (a, b) => a * b;
+```
+
+This is equivalent to:
+
+```js
+const multiply = (a, b) => {
+  return a * b;
+};
+```
+
+### 5. Multiple Statements
+
+If your function has **multiple statements**, you must use braces and `return`:
+
+```js
+const multiply = (a, b) => {
   const result = a * b;
   return result;
 };
+```
 
-## Arrow functions do not create their own this (Important)
-They use this from their surrounding code.
+---
+
+## `this` Behavior (Important)
+
+Arrow functions **do not create their own `this`**.
+They use `this` from their surrounding code.
+
 This makes them very useful in:
 
-- Classes
-- Callbacks (map, filter, forEach)
-- Event handlers
-- React components
+* Classes
+* Callbacks (`map`, `filter`, `forEach`)
+* Event handlers
+* React components
 
-``` class Person {
+```js
+class Person {
   name = 'Max';
 
   printName = () => {
@@ -59,7 +102,17 @@ This makes them very useful in:
   };
 }
 
-When to Avoid using arrow function 
+const person = new Person();
+person.printName(); // prints 'Max'
+```
 
--You need the arguments object
--You need a constructor (cannot use new with arrow functions)
+---
+
+## When to Avoid Arrow Functions
+
+Do **not** use arrow functions when:
+
+* You need the `arguments` object
+* You need a constructor (cannot use `new` with arrow functions)
+
+
