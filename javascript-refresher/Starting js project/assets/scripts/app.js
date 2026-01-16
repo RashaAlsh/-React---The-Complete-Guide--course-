@@ -94,3 +94,11 @@ console.log(result);
 const [firstName , lastName ] = ["Max","deiz"];
 console.log(firstName)
 console.log(lastName)
+
+const {name : userName , age} = {
+  name: rash ,
+  age: 28 ,
+}
+
+console.log(userName)
+console.log(age)
