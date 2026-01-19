@@ -1,12 +1,19 @@
+import { useState } from 'react';
 import {CORE_CONCEPTS} from './data'
 import Header from './components/Header/Header';
 import CoreConcepts from './components/CoreConcepts'
 import TabButton from './components/TabButton';
 
 function App() {
-  function handelSelect(){
-    console.log('Hello World - Selected')
+const [selectedTopic , setSelectedTopic] = useState('Please click a button');
+
+  function handelSelect(selectedButton){
+   setSelectedTopic(selectedButton) 
+    console.log(selectedTopic)
   }
+
+  console.log('App Component Executing')
+
   return (
     <div> 
        <Header/>
@@ -35,11 +42,12 @@ function App() {
      <section id="examples">
         <h2>Examples</h2>
         <menu>
-          <TabButton onSelect={handelSelect}>Components</TabButton>
-          <TabButton onSelect={handelSelect}>JSX</TabButton>
-          <TabButton onSelect={handelSelect}>Props</TabButton>
-          <TabButton onSelect={handelSelect}>State</TabButton>
+          <TabButton onSelect={()=> handelSelect('components')}>Components</TabButton>
+          <TabButton onSelect={()=>handelSelect('jsx')}>JSX</TabButton>
+          <TabButton onSelect={()=>handelSelect('props')}>Props</TabButton>
+          <TabButton onSelect={()=>handelSelect('state')}>State</TabButton>
         </menu>
+        {selectedTopic}
      </section>
       </main>
     </div>
