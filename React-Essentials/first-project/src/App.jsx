@@ -17,7 +17,7 @@ const [selectedTopic , setSelectedTopic] = useState();
   console.log('App Component Executing')
 
   return (
-    <div> 
+    <> 
        <Header/>
       <main>
       <section id='core-concepts'>
@@ -49,7 +49,7 @@ const [selectedTopic , setSelectedTopic] = useState();
         )}
      </section>
       </main>
-    </div>
+    </>
   );
 }
 
